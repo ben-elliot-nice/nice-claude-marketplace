@@ -1,0 +1,12 @@
+[submodule "plugins/cognigy"]
+	path = plugins/cognigy
+	url = https://github.com/ben-elliot-nice/cognigy.git
+[submodule "plugins/cxone"]
+	path = plugins/cxone
+	url = https://github.com/ben-elliot-nice/cxone.git
+[submodule "plugins/knowledge"]
+	path = plugins/knowledge
+	url = https://github.com/ben-elliot-nice/knowledge.git
+[submodule "plugins/private"]
+	path = plugins/private
+	url = git@github.com:ben-elliot-nice/private.git

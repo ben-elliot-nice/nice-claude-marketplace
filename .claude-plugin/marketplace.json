@@ -1,0 +1,29 @@
+{
+  "name": "nice",
+  "owner": {
+    "name": "Ben Elliot",
+    "email": "ben.elliot@nice.com"
+  },
+  "plugins": [
+    {
+      "name": "cognigy",
+      "source": "./plugins/cognigy",
+      "description": "Cognigy AI agent development skills"
+    },
+    {
+      "name": "cxone",
+      "source": "./plugins/cxone",
+      "description": "CXone studio integration skills"
+    },
+    {
+      "name": "knowledge",
+      "source": "./plugins/knowledge",
+      "description": "Knowledge base management skills"
+    },
+    {
+      "name": "private",
+      "source": "./plugins/private",
+      "description": "NICE APAC internal skills (private)"
+    }
+  ]
+}
