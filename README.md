@@ -28,7 +28,7 @@ Collection of tools for Agentic LOB use in Claude Code.
 Add this marketplace to Claude Code:
 
 ```bash
-/plugin marketplace add ~/repos/claude-marketplace/nice
+/plugin marketplace add ~/repos/claude-marketplace/nice-claude-marketplace
 ```
 
 Install a plugin:
@@ -40,14 +40,14 @@ Install a plugin:
 ## Repository Structure
 
 ```
-nice/
+nice-claude-marketplace/                    # ben-elliot-nice/nice-claude-marketplace
 ├── .claude-plugin/
-│   └── marketplace.json          # Marketplace catalog
+│   └── marketplace.json                    # Marketplace catalog
 ├── plugins/
-│   ├── cognigy/                  # Submodule: public
-│   ├── cxone/                    # Submodule: public
-│   ├── knowledge/                # Submodule: public
-│   └── private/                  # Submodule: private
+│   ├── cognigy/                            # Submodule: cognigy-claude-plugin (public)
+│   ├── cxone/                              # Submodule: cxone-claude-plugin (public)
+│   ├── knowledge/                          # Submodule: knowledge-claude-plugin (public)
+│   └── private/                            # Submodule: claude-private-skills (private)
 └── README.md
 ```
 
