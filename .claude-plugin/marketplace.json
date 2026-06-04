@@ -19,11 +19,6 @@
       "name": "knowledge",
       "source": "./plugins/knowledge",
       "description": "Knowledge base management skills"
-    },
-    {
-      "name": "private",
-      "source": "./plugins/private",
-      "description": "NICE APAC internal skills (private)"
     }
   ]
 }
