@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: true
           token: ${{ secrets.MARKETPLACE_PAT }}
@@ -25,11 +25,9 @@ jobs:
           if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
             echo "path=${{ github.event.client_payload.submodule_path }}" >> "$GITHUB_OUTPUT"
             echo "plugin=${{ github.event.client_payload.plugin }}" >> "$GITHUB_OUTPUT"
-            echo "version=${{ github.event.client_payload.version }}" >> "$GITHUB_OUTPUT"
           else
             echo "path=${{ inputs.submodule_path }}" >> "$GITHUB_OUTPUT"
             echo "plugin=$(basename ${{ inputs.submodule_path }})" >> "$GITHUB_OUTPUT"
-            echo "version=manual" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Update submodule to latest main
@@ -43,6 +41,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No submodule change to commit."
           else
-            git commit -m "chore: update ${{ steps.resolve.outputs.plugin }} plugin to v${{ steps.resolve.outputs.version }}"
+            VERSION=$(jq -r '.version' "${{ steps.resolve.outputs.path }}/.claude-plugin/plugin.json")
+            git commit -m "chore: update ${{ steps.resolve.outputs.plugin }} plugin to v${VERSION}"
             git push
           fi
