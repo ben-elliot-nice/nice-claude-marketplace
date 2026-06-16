@@ -7,6 +7,3 @@
 [submodule "plugins/knowledge"]
 	path = plugins/knowledge
 	url = https://github.com/ben-elliot-nice/knowledge-claude-plugin.git
-[submodule "plugins/private"]
-	path = plugins/private
-	url = git@github.com:ben-elliot-nice/claude-private-skills.git
