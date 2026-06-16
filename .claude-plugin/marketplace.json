@@ -7,17 +7,26 @@
   "plugins": [
     {
       "name": "cognigy",
-      "source": "./plugins/cognigy",
+      "source": {
+        "source": "github",
+        "repo": "ben-elliot-nice/cognigy-claude-plugin"
+      },
       "description": "Cognigy AI agent development skills"
     },
     {
       "name": "cxone",
-      "source": "./plugins/cxone",
+      "source": {
+        "source": "github",
+        "repo": "ben-elliot-nice/cxone-claude-plugin"
+      },
       "description": "CXone studio integration skills"
     },
     {
       "name": "knowledge",
-      "source": "./plugins/knowledge",
+      "source": {
+        "source": "github",
+        "repo": "ben-elliot-nice/knowledge-claude-plugin"
+      },
       "description": "Knowledge base management skills"
     }
   ]
